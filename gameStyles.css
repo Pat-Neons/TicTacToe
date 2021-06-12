@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  background-color: #655bff;
+}
+
+:root {
+  --board-size: 35vw;
+}
+
+/* container thet wraps the game board  */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.game-board {
+  margin: 0 auto;
+  width: var(--board-size);
+  height: var(--board-size);
+  /* background-color: black; */
+  border-radius: 10px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  background-color: rgb(91, 208, 255);
+  padding: 1%;
+  margin: 7%;
+  border-radius: 50%;
+  box-shadow: #0000007a 0px 0px 20px;
+  display: grid;
+}
+
+.box.x::before,
+.box.x::after {
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* media queries */
+@media (max-width: 1000px) {
+  :root {
+    --board-size: 50vw;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --board-size: 80vw;
+  }
+}
+@media (max-width: 300px) {
+  :root {
+    --board-size: 100vw;
+  }
+}

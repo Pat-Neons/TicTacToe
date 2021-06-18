@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="gameStyles.css" />
-    <script defer src="gameApp.js"></script>
+    <script defer src="app.js"></script>
   </head>
   <body>
+    <div class="choose-game-mode popup">
+      <button id="userVsUser">User Vs User</button>
+      <button id="userVsComp">User Vs Computer</button>
+    </div>
     <div class="game-container">
       <div class="game-board">
-        <div class="box x"></div>
+        <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -22,9 +26,19 @@
         <div class="box"></div>
       </div>
     </div>
-    <!-- <div class="winner-overlay-popup">
-      <span id="winner name"></span>
-      wins!
-    </div> -->
+    <div class="popup">
+      <div class="tie-overlay overlay">
+        <h1>Tie!</h1>
+        <h3>Click to continue.</h3>
+      </div>
+      <div class="loser-overlay overlay">
+        <h1>O Wins!</h1>
+        <h3>Click to continue.</h3>
+      </div>
+      <div class="winner-overlay overlay">
+        <h1>X Wins!</h1>
+        <h3>Click to continue.</h3>
+      </div>
+    </div>
   </body>
 </html>
